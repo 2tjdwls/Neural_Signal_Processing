@@ -207,12 +207,5 @@ for freq = 1:5
     subplot(3,5,freq+10); topoplot(diff_topo(:,freq),chanlocs, 'maplimits', [0 0.1]); title(diff_name{freq});
 end
 
-figure
-for freq = 1:5
-    subplot(3,5,freq); topoplot(alert_topo(:,freq),chanlocs,'maplimits', [-0.07 0.25]); title (alert_band_name{freq});
-    subplot(3,5,freq+5); topoplot(fatigue_topo(:,freq),chanlocs, 'maplimits', [-0.05 0.37]); title (fatigue_band_name{freq});
-    subplot(3,5,freq+10); topoplot(diff_topo(:,freq),chanlocs, 'maplimits', [0 0.1]); title(diff_name{freq});
-end
-
 subplot(3,5,13); topoplot(diff_topo(:,3),chanlocs, 'maplimits', [0 0.065], 'emarker2', {marker_ch, 'o', 'k'}); title(diff_name{3});
 
